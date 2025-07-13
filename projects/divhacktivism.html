@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DivHacks - DivHacktivism</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #FEFEFE;
+            color: #4A4A4A;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(191, 146, 100, 0.2);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #6F826A;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            background: #BF9264;
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .back-btn::before {
+            content: '←';
+            font-size: 1.1rem;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            color: #BF9264;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 1.3rem;
+            color: #6F826A;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .tech-overview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tech-tag {
+            background: #BBD8A3;
+            color: #4A4A4A;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            color: #BF9264;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #5A5A5A;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(240, 241, 197, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(191, 146, 100, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h4 {
+            color: #BF9264;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .demo-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .demo-btn {
+            background: #BF9264;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-btn:hover {
+            background: #A8804E;
+            transform: translateY(-2px);
+        }
+
+        .demo-btn.secondary {
+            background: transparent;
+            color: #6F826A;
+            border: 2px solid #6F826A;
+        }
+
+        .demo-btn.secondary:hover {
+            background: #6F826A;
+            color: white;
+        }
+
+        .ui-preview-video {
+            width: 100%;
+            max-height: 500px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(191, 146, 100, 0.2);
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.2rem;
+            }
+
+            .demo-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/index.html" class="back-btn">Back to Portfolio</a>
+            <h1 class="project-title">DivHacks - DivHacktivism</h1>
+            <p class="project-subtitle">Connecting people to nonprofits for global activism</p>
+            <p class="project-subtitle">Oct 2024</p>
+            <div class="tech-overview">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Javascript</span>
+                <span class="tech-tag">AI/NLP</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <div class="demo-links">
+                <a href="https://github.com/vivianknee/divhacksFrontend" class="demo-btn secondary">📂 Frontend Repository</a>
+                <a href="https://github.com/vivianknee/divhacksBackend2" class="demo-btn secondary">📂 Backend Repository</a>
+            </div>
+
+            <video class="ui-preview-video" controls>
+                <source src="/assets/divhacktivism.mp4" type="video/mp4">
+            </video>
+
+            <section class="section">
+                <h3>Project Overview</h3>
+                <p>DivHacktivism is a website built during a 3-day hackathon at Columbia University’s DivHacks, created by a team of four passionate developers. The platform connects individuals passionate about activism with nonprofits (NPOs) focused on global issues, bridging the gap between those who want to help but don’t know how, and organizations seeking support. Our goal is to provide an accessible, beginner-friendly way to discover and engage with nonprofits using smart search and AI recommendations.</p>
+            </section>
+
+            <section class="section">
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>📚 Extensive NPO Database</h4>
+                        <p>We curated a comprehensive database of over 150 nonprofits focused on various global issues, providing users a rich pool of organizations to explore.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔎 Search & Filtering</h4>
+                        <p>Users can easily search nonprofits by keywords, issues, and locations, with filtering options to narrow down to causes that resonate most with them.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🤖 AI-backed Recommendation System</h4>
+                        <p>Using natural language processing and vector embeddings, our AI suggests nonprofits aligned with user interests, offering personalized guidance for first-time activists.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>✉️ NPO Onboarding Request</h4>
+                        <p>Nonprofits can request to join our platform through a service form, helping us continuously grow the database and support more organizations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Technical Implementation</h3>
+                <p>The frontend is built with javascript, providing a dynamic and responsive user experience. The backend uses Java to manage API requests, handle the AI recommendation logic, and curate the nonprofit database.</p>
+                <p>We implemented AI-powered text-to-vector conversion using NLP techniques to enable semantic search and matching, integrated with a vector database for efficient querying. The system supports onboarding requests and synchronizes data between frontend and backend seamlessly.</p>
+            </section>
+
+            <section class="section">
+                <h3>Development Phases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Phase 1: Brainstorming & Database Curation</h4>
+                        <p>Collaboratively identified the core problem and solution. Curated and structured the database of 150+ nonprofits to serve as the foundation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 2: Backend & AI Implementation</h4>
+                        <p>Built backend services, tackled AI challenges such as text to vector embedding, and implemented semantic search and recommendation systems.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 3: Frontend Development & Integration</h4>
+                        <p>Developed a user-friendly interface with React, integrated backend APIs, search, filtering, and onboarding features, culminating in a cohesive product demo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Challenges & Solutions</h3>
+
+                <p><strong>Challenge:</strong> Curating a meaningful and comprehensive nonprofit database within limited hackathon time.</p>
+                <p><strong>Solution:</strong> We divided research tasks among the team and used public datasets and nonprofit registries to gather quality data efficiently.</p>
+
+                <p><strong>Challenge:</strong> Implementing AI-powered recommendations with limited experience in NLP and vector databases.</p>
+                <p><strong>Solution:</strong> We learned and experimented with text vectorization techniques, applied Python NLP libraries, and integrated a vector database for semantic search.</p>
+            </section>
+
+            <section class="section">
+                <h3>Future Enhancements</h3>
+                <ul style="margin-left: 20px; color: #5A5A5A;">
+                    <li>Expand the nonprofit database to include more organizations globally</li>
+                    <li>Improve and refine the AI-backed recommendation system</li>
+                    <li>Enhance the user interface for better accessibility and engagement</li>
+                    <li>Deploy a stable production environment for public use</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h3>Learning Outcomes & Future Steps</h3>
+                <p>This project was an incredible learning opportunity that enhanced my skills in:</p>
+                <ul style="margin-left: 20px; color: #5A5A5A;">
+                    <li>Rapid full-stack development using React and Node.js</li>
+                    <li>Applying AI and NLP techniques for real-world applications</li>
+                    <li>Data curation and management for impactful projects</li>
+                    <li>Collaborating effectively in a fast-paced hackathon environment</li>
+                    <li>Deploying and integrating complex systems under time constraints</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
