@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFest Hackathon LookBook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #FEFEFE;
+            color: #4A4A4A;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(191, 146, 100, 0.2);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #6F826A;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            background: #BF9264;
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .back-btn::before {
+            content: '←';
+            font-size: 1.1rem;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            color: #BF9264;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 1.3rem;
+            color: #6F826A;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .tech-overview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tech-tag {
+            background: #BBD8A3;
+            color: #4A4A4A;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            color: #BF9264;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #5A5A5A;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(240, 241, 197, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(191, 146, 100, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h4 {
+            color: #BF9264;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .demo-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .demo-btn {
+            background: #BF9264;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-btn:hover {
+            background: #A8804E;
+            transform: translateY(-2px);
+        }
+
+        .demo-btn.secondary {
+            background: transparent;
+            color: #6F826A;
+            border: 2px solid #6F826A;
+        }
+
+        .demo-btn.secondary:hover {
+            background: #6F826A;
+            color: white;
+        }
+
+        .ui-preview-video {
+            width: 100%;
+            max-height: 500px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(191, 146, 100, 0.2);
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.2rem;
+            }
+
+            .demo-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/index.html" class="back-btn">Back to Portfolio</a>
+            <h1 class="project-title">LookBook</h1>
+            <p class="project-subtitle">An all-in-one fashion app for users to share outfits and link clothing sources.</p>
+            <div class="tech-overview">
+                <span class="tech-tag">Swift</span>
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Xcode</span>
+                <span class="tech-tag">NodeJs</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <div class="demo-links">
+                <a href="#" class="demo-btn">🚀 Presentation</a>
+                <a href="#" class="demo-btn secondary">📂 GitHub Repository</a>
+            </div>
+
+            <video class="ui-preview-video" controls>
+                <source src="/assets/devfest.mp4" type="video/mp4">
+            </video>
+
+
+            <section class="section">
+                <h3>Project Overview</h3>
+                <p>LookBook is a mobile-first fashion app developed during a 24-hour hackathon with over 250 participants from 62 schools. Unlike mainstream social media, LookBook is entirely fashion-focused—designed to streamline outfit sharing, browsing, and shopping. Users can easily explore outfit inspiration and directly access linked clothing items via an integrated sidebar. I designed the interface in Figma and built the iOS frontend using SwiftUI in Xcode.</p>
+            </section>
+
+            <section class="section">
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🎯 Fashion-Only Platform</h4>
+                        <p>Unlike broader social platforms, LookBook focuses purely on style and fashion, helping users avoid noise and curate a more aesthetic, relevant feed.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔗 Linked Clothing Items</h4>
+                        <p>Creators can tag and link individual items they're wearing. These links appear in a clean sidebar, enabling easy access for viewers to find or shop the exact pieces.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💸 Affiliate-Friendly</h4>
+                        <p>The platform supports affiliate linking, making it easy for creators to monetize their content by directing followers to purchase pages directly from their LookBook posts.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Technical Implementation</h3>
+                <p>We implemented backend functionality using Node.js, supporting robust POST and GET requests for user-uploaded content and metadata. Our MySQL database is globally hosted, ensuring consistent performance and scalability.</p>
+                <p>On the frontend, we used SwiftUI to create a clean, user-friendly mobile interface. The app emphasizes visual clarity and ease of interaction, reflecting the aesthetic focus of the platform.</p>
+            </section>
+
+            <section class="section">
+                <h3>Development Phases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Phase 1: User Design</h4>
+                        <p>Designed a user-friendly, aesthetic interface using Figma to visualize the app's layout, user flow, and core features with a focus on simplicity and style.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 2: Content Upload & Profiles</h4>
+                        <p>We built foundational features for uploading outfit posts, item links, and storing user profile information in the backend database.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 3: Outfit Feed</h4>
+                        <p>Develop a user feed that lets users view their past outfits, helping them track and plan their looks over time.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Challenges & Solutions</h3>
+
+                <p><strong>Challenge:</strong> Choosing the right tech stack for a full-stack app within a 24-hour time limit.</p>
+                <p><strong>Solution:</strong> We focused on tools we could learn quickly and implement efficiently. For the backend, Node.js and MySQL provided fast setup and reliable performance. For the frontend, we chose Swift and Xcode to create a polished iOS app experience, despite being new to the tools.</p>
+            
+                <p><strong>Challenge:</strong> Learning Swift and Xcode from scratch during the hackathon.</p>
+                <p><strong>Solution:</strong> We rapidly learned SwiftUI by following documentation and sample projects, which allowed us to build a functional and visually appealing UI within the limited timeframe.</p>
+            
+                <p><strong>Challenge:</strong> Managing scope and workload in a high-pressure 24-hour environment.</p>
+                <p><strong>Solution:</strong> We prioritized core features—like post creation, sidebar linking, and initial database setup—and left planned features like the calendar and personalized search for future phases. Strong communication and fast iterative testing helped keep development on track.</p>
+
+                <p><strong>Challenge:</strong> Designing a seamless experience for both creators and users.</p>
+                <p><strong>Solution:</strong> We sketched the UX in Figma before writing code, ensuring that users could intuitively browse, search, and interact with fashion content. This helped us reduce friction and align the frontend with user needs.</p>
+            </section>
+
+            <section class="section">
+                <h3>Future Enhancements</h3>
+                <p>One of our top priorities is enhancing the search experience. We plan to build a personalized, dynamic search bar that allows users to find specific clothing items, brands, or styles based on their preferences and browsing behavior. This will include filters by occasion, color palette, season, and even trending influencer looks.</p>
+
+                <p>As we move beyond the hackathon version, we aim to develop LookBook into a fully featured mobile application.</p>
+
+                <p>Looking further ahead, we envision integrating affiliate link tracking for content creators, implementing push notifications for followed users, and possibly expanding to a web platform for broader access. The long-term goal is to make LookBook a go-to destination for discovering, sharing, and shopping fashion—all in one place.</p>
+            </section>
+
+
+            <section class="section">
+                <h3>Learning Outcomes</h3>
+                <p>LookBook strengthened my skills in:</p>
+                <ul style="margin-left: 20px; color: #5A5A5A;">
+                    <li>Mobile frontend development with SwiftUI</li>
+                    <li>Building RESTful APIs using Node.js</li>
+                    <li>Integrating SQL databases in full-stack projects</li>
+                    <li>Designing user-first interfaces with Figma</li>
+                    <li>Collaborating in fast-paced hackathon environments</li>
+                </ul>
+            </section>
+        </main>
+        
+    </div>
+</body>
+</html>
+
+
