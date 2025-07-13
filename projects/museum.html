@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Museum</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #FEFEFE;
+            color: #4A4A4A;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(191, 146, 100, 0.2);
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #6F826A;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .back-btn:hover {
+            background: #BF9264;
+            color: white;
+            transform: translateX(-3px);
+        }
+
+        .back-btn::before {
+            content: '←';
+            font-size: 1.1rem;
+        }
+
+        .project-title {
+            font-size: 3rem;
+            color: #BF9264;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .project-subtitle {
+            font-size: 1.3rem;
+            color: #6F826A;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .tech-overview {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tech-tag {
+            background: #BBD8A3;
+            color: #4A4A4A;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h3 {
+            font-size: 2rem;
+            color: #BF9264;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            color: #5A5A5A;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: rgba(240, 241, 197, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid rgba(191, 146, 100, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h4 {
+            color: #BF9264;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .demo-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .demo-btn {
+            background: #BF9264;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .demo-btn:hover {
+            background: #A8804E;
+            transform: translateY(-2px);
+        }
+
+        .demo-btn.secondary {
+            background: transparent;
+            color: #6F826A;
+            border: 2px solid #6F826A;
+        }
+
+        .demo-btn.secondary:hover {
+            background: #6F826A;
+            color: white;
+        }
+
+        .ui-preview-video {
+            width: 100%;
+            max-height: 500px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid rgba(191, 146, 100, 0.2);
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.2rem;
+            }
+
+            .demo-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="/index.html" class="back-btn">Back to Portfolio</a>
+            <h1 class="project-title">Sorting Algorithm Museum</h1>
+            <p class="project-subtitle">Make learning sorting algorithms more interactive!</p>
+            <p class="project-subtitle">Oct 2023</p>
+            <div class="tech-overview">
+                <span class="tech-tag">SpringBoot</span>
+                <span class="tech-tag">Javascript</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">AWS</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+
+            <div class="demo-links">
+                <a href="https://github.com/vivianknee/Sorting-Algoritm-Museum" class="demo-btn secondary">📂 Frontend Repository</a>
+                <a href="https://github.com/vivianknee/AVK_Backend" class="demo-btn secondary">📂 Backend Repository</a>
+            </div>
+
+            <video class="ui-preview-video" controls>
+                <source src="/assets/museum.mp4" type="video/mp4">
+            </video>
+
+            <section class="section">
+                <h3>Project Overview</h3>
+                <p>This website is an interactive learning tool that visually demonstrates how different sorting algorithms work. Users can select an algorithm and watch as a set of “art pieces” is sorted by number of likes, with each step animated in real time using the JavaScript Canvas API. The goal is to make algorithm education more engaging and intuitive through visual storytelling. The frontend is hosted on GitHub Pages and built with HTML, CSS, and JavaScript, while the backend is powered by a custom SpringBoot API with SQLite for data persistence.</p>
+            </section>
+
+            <section class="section">
+                <h3>Key Features</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>🎨 Visual Sorting Animations</h4>
+                        <p>Users can watch sorting algorithms come to life through animated visualizations using JavaScript Canvas, making complex concepts easier to understand.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔍 Algorithm Selection</h4>
+                        <p>Visitors can choose from various sorting algorithms (e.g., Bubble Sort, Quick Sort) to see how each method behaves with the same dataset.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>💾 Persistent Data and Likes</h4>
+                        <p>Each "art piece" is stored in an SQLite database and can be liked by users. Sorting is performed based on the number of likes, offering both interaction and purpose.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Technical Implementation</h3>
+                <p>The backend is built with SpringBoot and supports custom API routes for GET and POST requests, handling likes, sorting data, and syncing with the frontend. SQLite was used for lightweight, efficient local data storage.</p>
+                <p>The frontend is hosted on GitHub Pages and built with HTML, CSS, and JavaScript. Canvas animations were created manually to visualize each step of the sorting process, synchronizing DOM updates with algorithm behavior.</p>
+            </section>
+
+            <section class="section">
+                <h3>Development Phases</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>Phase 1: Backend and Database Setup</h4>
+                        <p>Designed the database schema using SQLite to store art pieces and their like counts. Developed a custom RESTful API with SpringBoot to handle data retrieval (GET) and updates (POST). Tested API endpoints for data integrity and performance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 2: Frontend and Animation Development</h4>
+                        <p>Implemented sorting algorithm selection UI that allows users to choose from various algorithms. Created custom sorting animations using the JavaScript Canvas API, visually demonstrating the sorting process.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>Phase 3: Integration and Finalization</h4>
+                        <p>Connected the frontend to the backend API to fetch and update art piece data dynamically.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>Challenges & Solutions</h3>
+
+                <p><strong>Challenge:</strong> Creating smooth and accurate sorting animations that reflect algorithm logic in real time.</p>
+                <p><strong>Solution:</strong> I used the JavaScript Canvas API to manually control rendering frames. This gave me full control over the animation flow and allowed me to visualize each algorithm step-by-step in sync with data updates.</p>
+
+                <p><strong>Challenge:</strong> Connecting a static frontend hosted on GitHub Pages with a dynamic backend.</p>
+                <p><strong>Solution:</strong> I developed a custom RESTful API using SpringBoot and configured CORS policies to enable communication between the frontend and backend servers, ensuring smooth data exchange without deployment conflicts.</p>
+
+                <p><strong>Challenge:</strong> Designing a data model to support sorting, liking, and visualization all at once.</p>
+                <p><strong>Solution:</strong> I structured the SQLite database to store each art piece with metadata, including a “likes” field, and updated this data via POST requests whenever users interacted with the visual elements.</p>
+            </section>
+
+            <section class="section">
+                <h3>Learning Outcomes</h3>
+                <p>This project strengthened my skills in:</p>
+                <ul style="margin-left: 20px; color: #5A5A5A;">
+                    <li>Creating dynamic visualizations using the JavaScript Canvas API</li>
+                    <li>Developing RESTful APIs with SpringBoot</li>
+                    <li>Designing and managing relational databases with SQLite</li>
+                    <li>Integrating frontend and backend components in a full-stack environment</li>
+                    <li>Communicating complex technical concepts through engaging visual design</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
