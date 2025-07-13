@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivian - Portfolio</title>
+    <title>Vivian - CS Portfolio</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
         
@@ -29,14 +29,7 @@
 
         /* Header */
         header {
-            background: rgba(111, 130, 106, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(111, 130, 106, 0.2);
+            display: none;
         }
 
         nav {
@@ -86,7 +79,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 60px 0 80px;
         }
 
         .hero-content {
@@ -107,8 +100,8 @@
         }
 
         .profile-image {
-            width: 300px;
-            height: 300px;
+            width: 30px;
+            height: 30px;
             border-radius: 20px;
             object-fit: cover;
             box-shadow: 0 15px 40px rgba(191, 146, 100, 0.2);
@@ -183,20 +176,20 @@
 
         .cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 30px;
+            padding: 12px 25px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
@@ -218,6 +211,18 @@
 
         .btn-secondary:hover {
             background: #6F826A;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-nav {
+            background: transparent;
+            color: #BF9264;
+            border: 2px solid #BF9264;
+        }
+
+        .btn-nav:hover {
+            background: #BF9264;
             color: white;
             transform: translateY(-2px);
         }
@@ -336,56 +341,71 @@
             font-weight: 500;
         }
 
-        /* Timeline */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
+        /* Timeline - Remove all timeline styles */
+        
+        /* Experience Grid Layout */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #6F826A;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin: 40px 0;
-            padding: 0 60px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 20px;
-            width: 15px;
-            height: 15px;
-            background: #BF9264;
-            border-radius: 50%;
-            border: 3px solid #F0F1C5;
-        }
-
-        .timeline-content {
+        .experience-card {
             background: rgba(240, 241, 197, 0.3);
-            padding: 25px;
-            border-radius: 15px;
+            border-radius: 20px;
+            padding: 30px;
             backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(191, 146, 100, 0.2);
+            position: relative;
         }
 
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: 50%;
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(191, 146, 100, 0.2);
         }
 
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-right: 50%;
+        .experience-card h3 {
+            color: #BF9264;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .experience-card .company {
+            color: #6F826A;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .experience-card .date {
+            color: #BBD8A3;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .experience-card p {
+            color: #5A5A5A;
+            line-height: 1.6;
+        }
+
+        .experience-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .experience-tag {
+            background: #BBD8A3;
+            color: #4A4A4A;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
         /* Footer */
@@ -481,17 +501,16 @@
             }
 
             .timeline::before {
-                left: 30px;
+                display: none;
             }
 
             .timeline-item::before {
-                left: 30px;
+                display: none;
             }
 
             .timeline-item:nth-child(odd) .timeline-content,
             .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 70px;
-                margin-right: 0;
+                margin: 0;
             }
 
             .cta-buttons {
@@ -543,7 +562,7 @@
 <body>
     <header>
         <nav class="container">
-            <div class="logo">Vivian Ni</div>
+            <div class="logo">Your Name</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -558,26 +577,20 @@
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1 class="floating">Hi, I'm [Your Name]! 👋</h1>
-                        <p class="subtitle">Computer Science Student</p>
+                        <h1 class="floating">Hi, I'm Vivian! 👋</h1>
                         <p class="university">Columbia University • Class of 2026</p>
                         <div class="typing-container">
                             <p class="description typing-text"></p>
                         </div>
                         <div class="cta-buttons">
-                            <a href="#projects" class="btn btn-primary">View My Work</a>
-                            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                            <a href="#projects" class="btn btn-primary">Projects</a>
+                            <a href="#experience" class="btn btn-nav">Experience</a>
+                            <a href="#skills" class="btn btn-nav">Skills</a>
+                            <a href="#contact" class="btn btn-secondary">Contact</a>
                         </div>
                     </div>
                     <div class="hero-image">
-                        <!-- Replace with your actual image -->
-                        <!-- <img src="your-photo.jpg" alt="Your Name" class="profile-image"> -->
-                        
-                        <!-- Placeholder until you add your photo -->
-                        <div class="placeholder-image">
-                            👩‍💻
-                        </div>
-                        <p style="font-size: 0.9rem; color: #6F826A; margin-top: 15px; text-align: center;">Replace with your photo!</p>
+                        <img src="assets/cover-photo.jpg" alt="Your Name">
                     </div>
                 </div>
             </div>
@@ -629,36 +642,76 @@
         <section id="experience" class="section">
             <div class="container">
                 <h2>Experience & Activities</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Software Engineering Intern</h3>
-                            <p class="meta">Company Name • Summer 2024</p>
-                            <p>Developed and maintained web applications, collaborated with cross-functional teams, and contributed to major product features.</p>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h3>Software Engineering Intern</h3>
+                        <div class="company">Company Name</div>
+                        <div class="date">Summer 2024</div>
+                        <p>Developed and maintained web applications, collaborated with cross-functional teams, and contributed to major product features that improved user experience by 25%.</p>
+                        <div class="tags">
+                            <span class="experience-tag">React</span>
+                            <span class="experience-tag">Node.js</span>
+                            <span class="experience-tag">MongoDB</span>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>CS Club Vice President</h3>
-                            <p class="meta">Columbia University • 2023-2024</p>
-                            <p>Led technical workshops, organized hackathons, and mentored underclassmen in programming and career development.</p>
+                    <div class="experience-card">
+                        <h3>Research Assistant</h3>
+                        <div class="company">Columbia CS Department</div>
+                        <div class="date">2023 - Present</div>
+                        <p>Conducting research in machine learning and computer vision, contributing to academic publications, and developing innovative solutions for real-world problems.</p>
+                        <div class="tags">
+                            <span class="experience-tag">Python</span>
+                            <span class="experience-tag">TensorFlow</span>
+                            <span class="experience-tag">Research</span>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Research Assistant</h3>
-                            <p class="meta">Columbia CS Department • 2023-Present</p>
-                            <p>Conducting research in [your research area], contributing to academic publications, and developing innovative solutions.</p>
+                    <div class="experience-card">
+                        <h3>CS Club Vice President</h3>
+                        <div class="company">Columbia University</div>
+                        <div class="date">2023 - 2024</div>
+                        <p>Led technical workshops for 100+ students, organized hackathons, and mentored underclassmen in programming and career development.</p>
+                        <div class="tags">
+                            <span class="experience-tag">Leadership</span>
+                            <span class="experience-tag">Teaching</span>
+                            <span class="experience-tag">Event Planning</span>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Teaching Assistant</h3>
-                            <p class="meta">Intro to Computer Science • Spring 2024</p>
-                            <p>Helped students grasp fundamental CS concepts, led recitation sessions, and provided one-on-one mentoring.</p>
+                    <div class="experience-card">
+                        <h3>Teaching Assistant</h3>
+                        <div class="company">Intro to Computer Science</div>
+                        <div class="date">Spring 2024</div>
+                        <p>Helped students grasp fundamental CS concepts, led recitation sessions for 50+ students, and provided one-on-one mentoring to improve academic performance.</p>
+                        <div class="tags">
+                            <span class="experience-tag">Teaching</span>
+                            <span class="experience-tag">Mentoring</span>
+                            <span class="experience-tag">CS Fundamentals</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3>Open Source Contributor</h3>
+                        <div class="company">Various Projects</div>
+                        <div class="date">2023 - Present</div>
+                        <p>Contributing to popular open source projects, fixing bugs, adding features, and collaborating with developers worldwide to improve software accessibility.</p>
+                        <div class="tags">
+                            <span class="experience-tag">Git</span>
+                            <span class="experience-tag">Collaboration</span>
+                            <span class="experience-tag">Code Review</span>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card">
+                        <h3>Hackathon Winner</h3>
+                        <div class="company">HackColumbia 2024</div>
+                        <div class="date">February 2024</div>
+                        <p>Built an AI-powered study assistant that won first place among 200+ participants. Led a team of 4 developers through 48 hours of intensive coding.</p>
+                        <div class="tags">
+                            <span class="experience-tag">AI/ML</span>
+                            <span class="experience-tag">Team Leadership</span>
+                            <span class="experience-tag">Rapid Prototyping</span>
                         </div>
                     </div>
                 </div>
@@ -710,12 +763,12 @@
                 <h2>Fun Facts & Hobbies</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Jounraling</h3>
+                        <h3>🎨 Creative Side</h3>
                         <p>I love digital art and design! When I'm not coding, you can find me creating illustrations or experimenting with new design tools.</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Food</h3>
+                        <h3>🌱 Always Learning</h3>
                         <p>Currently exploring cloud computing and DevOps practices. I believe in lifelong learning and staying curious about new technologies.</p>
                     </div>
                 </div>
@@ -730,13 +783,13 @@
                 <p>I'm always excited to discuss new opportunities, collaborate on projects, or just chat about technology!</p>
                 
                 <div class="social-links">
-                    <a href="vn2344@columbia.edu"></a>
-                    <a href="https://linkedin.com/in/ni-vivian"></a>
-                    <a href="https://github.com/vivianknee"></a>
+                    <a href="mailto:your.email@columbia.edu">📧</a>
+                    <a href="https://linkedin.com/in/yourprofile">💼</a>
+                    <a href="https://github.com/yourusername">🐙</a>
                 </div>
                 
                 <p style="margin-top: 30px; color: #6F826A; font-size: 0.9rem;">
-                    Made by Vivian :)
+                    Made by Vivian
                 </p>
             </div>
         </div>
