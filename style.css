@@ -129,7 +129,7 @@ nav {
 .hero h1 {
     font-size: 3.2rem;
     margin-bottom: 15px;
-    color: #BF9264;
+    color: #0f4318;
     font-weight: 700;
 }
 
@@ -141,7 +141,7 @@ nav {
 
 .hero .university {
     font-size: 1.2rem;
-    color: #6F826A;
+    color: #BF9264;
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -221,28 +221,39 @@ nav {
 
 .btn-nav {
     background: transparent;
-    color: #BF9264;
-    border: 2px solid #BF9264;
+    color: #BBD8A3;
+    border: 2px solid #BBD8A3;
 }
 
 .btn-nav:hover {
-    background: #BF9264;
+    background: #BBD8A3;
     color: white;
     transform: translateY(-2px);
 }
 
 /* Section Styling */
-.section {
-    padding: 80px 0;
-    margin-bottom: 40px;
-}
-
 .section h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 60px;
-    color: #BF9264;
-    font-weight: 600;
+    color: #0f4318;
+    font-weight: 700;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 30px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #BF9264, #BBD8A3);
+    border-radius: 2px;
 }
 
 /* Cards */
@@ -268,7 +279,7 @@ nav {
 }
 
 .card h3 {
-    color: #BF9264;
+    color: #0f4318;
     font-size: 1.4rem;
     margin-bottom: 15px;
     font-weight: 600;
@@ -423,7 +434,7 @@ nav {
 }
 
 .experience-card h3 {
-    color: #BF9264;
+    color: #0f4318;
     font-size: 1.4rem;
     margin-bottom: 8px;
     font-weight: 600;
@@ -437,7 +448,7 @@ nav {
 }
 
 .experience-card .date {
-    color: #BBD8A3;
+    color: #BF9264;
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 15px;
@@ -462,6 +473,26 @@ nav {
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 500;
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.experience-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: rgba(240, 241, 197, 0.5);
+    flex-shrink: 0;
 }
 
 /* Footer */
