@@ -256,6 +256,10 @@ nav {
     border-radius: 2px;
 }
 
+.spacing {
+    padding: 30px;
+}
+
 /* Cards */
 .card-grid {
     display: grid;
@@ -619,4 +623,33 @@ footer {
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+}
+
+/* Hobbies */
+.hobby-card {
+    background: rgba(240, 241, 197, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(191, 146, 100, 0.2);
+    text-align: center;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(191, 146, 100, 0.2);
+}
+
+.hobby-card h3 {
+    color: #BF9264;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hobby-card p {
+    color: #5A5A5A;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
